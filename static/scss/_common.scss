@@ -1,0 +1,94 @@
+// Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Kurale:300,400,700);
+body {
+    font-family: 'Kurale', 'Helvetica', 'Arial', serif;
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+// Common section
+section {
+    position: relative;
+    padding: 0;
+    color: #FFF;
+    text-align: center;
+}
+
+section::before,
+section::after {
+    position: absolute;
+    content: '';
+}
+
+.ss-style-top::before {
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-size: 25px 100%;
+    top: 0;
+    background-image: linear-gradient(315deg, $bg-color 50%, transparent 50%), linear-gradient(45deg, $bg-color 50%, transparent 50%);
+    margin-top: -30px;
+    z-index: 100;
+}
+
+.ss-style-bottom::before {
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-size: 25px 100%;
+    top: 0;
+    background-image: linear-gradient(583deg, $bg-color 50%, transparent 50%), linear-gradient(136deg, $bg-color 50%, transparent 50%);
+    margin-top: 0px;
+    z-index: 100;
+}
+
+.bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(44, 33, 5, 0.2);
+    z-index: 0;
+}
+
+.light-wrapper {
+    background: $bg-color;
+    color: $font-color-dark;
+}
+
+.inner {
+    padding-top: 112px;
+    padding-bottom: 32px;
+}
+
+.dark-wrapper {
+    background: $brand-primary;
+    color: $font-color-light;
+    font-size: 20px;
+    font-weight: bold;
+    .ss-style-top::before {
+        background-image: linear-gradient(315deg, $brand-primary 50%, transparent 50%), linear-gradient(45deg, $brand-primary 50%, transparent 50%);
+    }
+}
+
+// Jump animation
+@keyframes jump {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    40% {
+        transform: translate3d(0, 30%, 0);
+    }
+    100% {
+        transform: translate3d(0, 100%, 0);
+    }
+}
+
+.jump {
+    transform-origin: 50% 50%;
+    animation: jump .5s linear alternate infinite;
+}

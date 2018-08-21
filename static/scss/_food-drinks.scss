@@ -1,0 +1,130 @@
+// Food menu section
+.menu-items {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.menu-titles h1 {
+    text-shadow: none;
+    color: $brand-primary;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+#food-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hot-tag {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 15;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    line-height: 90px;
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 100px;
+}
+
+.br-red {
+    background-color: $brand-primary !important;
+}
+
+.pricing {
+    border-top: 1px solid #f1f1f1;
+    .pricing-item {
+        position: relative;
+        margin-top: 40px;
+        margin-bottom: 10px;
+        min-height: 212px;
+        .hot-tag {
+            top: 0;
+            left: 0;
+            margin-top: -15px;
+            margin-left: -15px;
+            height: 55px;
+            line-height: 44px;
+            font-size: 23px;
+            font-weight: 700;
+            border: 4px solid $font-color-light;
+        }
+        .pricing-item-details {
+            h3 {
+                font-size: 22px;
+                font-weight: bold;
+                display: inline-block;
+                width: 48%;
+            }
+            a.btn {
+                margin-top: 10px;
+            }
+            a.view-link {
+                display: inline-block;
+                margin-top: 7px;
+                font-size: 12px;
+                border-bottom: 1px dotted #aeaeae;
+            }
+        }
+    }
+}
+
+.img-placeholder {
+    min-height: 160px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 4px;
+    width: 50%;
+    min-width: 284px;
+    max-width: 250px;
+    float: left;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+// Drinks section
+.drinks {
+    font-size: 18px;
+    color: $font-color-light;
+    table td {
+        padding: 2px;
+        white-space: nowrap;
+    }
+}
+
+.drink-name {
+    color: $brand-primary;
+    font-weight: bold;
+}
+
+.drink-category-title {
+    font-weight: bold;
+    padding: 24px 0 12px 0;
+    text-transform: uppercase;
+}
+
+.drinks table {
+    width: 100%;
+    tr td {
+        vertical-align: top;
+        &:nth-child(2) {
+            overflow: auto;
+            display: table-cell;
+            white-space: normal;
+        }
+        &:first-child,
+        &:last-child {
+            width: 5%;
+            min-width: 58px;
+            text-align: right;
+        }
+    }
+}

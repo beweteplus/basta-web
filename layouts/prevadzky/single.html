@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="sk-SK">
+<!--<![endif]-->
+<head>
+<title>{{ .Params.sectionHeader.websiteTitle }} {{ .Params.Title }}</title> {{ .Hugo.Generator }}
+
+<!-- meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- css -->
+<link rel="stylesheet" href="/dist/bundle.css">
+{{ if eq (len (where .Site.Pages "IsPage" true)) 1 }}
+<style>
+.hideIfSingleLocation {visibility:hidden;}
+</style>
+{{ end }}
+		
+<link rel="apple-touch-icon" sizes="57x57" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-180x180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="basta"><link rel="icon" type="image/png" sizes="32x32" href="{{.Site.BaseURL}}/dist/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="{{.Site.BaseURL}}/dist/icons/favicon-16x16.png"><link rel="shortcut icon" href="{{.Site.BaseURL}}/dist/icons/favicon.ico"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-320x460.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-640x920.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-640x1096.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-750x1294.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1182x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1242x2148.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-748x1024.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-768x1004.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1496x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1536x2008.png">
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="120">
+	<div id="menu" class="navbar navbar-inverse navbar-fixed-top"
+		role="navigation">
+		<div class="container">
+			<div class="navbar-header visible-xs hideIfSingleLocation">
+				<div class="dropdown navbar-toggle narrow-item">
+					<span class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ .Params.navbar.locations1 }}
+					</span>
+					<ul class="dropdown-menu">
+						{{ range where .Site.Pages "IsPage" true}}
+							<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+						{{ end }}
+					</ul>
+				</div>
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				
+				<a class="navbar-brand" href="#"><h2>{{ .Params.sectionHeader.websiteTitle }}</h2></a>
+			</div>
+			<!-- navbar-header -->
+			<div id="navbar" class="navbar-collapse collapse">
+				<div id="logo" class="hidden-xs">
+					<a href="#header"> <img src="{{$.Site.Data.settings.logo}}" alt="">
+					</a>
+				</div>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li class="wide-item"><a href="#food-menu">{{ .Params.navbar.menu1 }}</a></li>
+					<li class="wide-item"><a href="#drinks">{{ .Params.navbar.drinks}}</a></li>
+					<li class="narrow-item"><a href="#about-us">{{ .Params.navbar.about}}</a></li>
+					<li class="logoSpacing"></li>
+					<li class="narrow-item"><a href="#news">{{ .Params.navbar.news}}</a></li>
+					<li class="narrow-item"><a href="#contact">{{ .Params.navbar.contact}}</a></li>
+
+					<!--fix for scroll spy active menu element-->
+					<li style="display: none;"><a href="#header"></a></li>
+					<li class="narrow-item dropdown hidden-xs hideIfSingleLocation">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#">{{ .Params.navbar.locations1 }}</a>
+						<ul class="dropdown-menu">
+							{{ range where .Site.Pages "IsPage" true}}
+								<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+							{{ end }}
+						</ul>
+					</li>
+				</ul>
+			</div>
+			
+			<!--/.navbar-collapse -->
+		</div>
+		<!-- container -->
+	</div>
+	<!-- menu -->
+
+	<div id="header">
+		<div class="bg-overlay"></div>
+		<div class="center text-center">
+			<div class="banner">
+				<h1 class="">{{ .Params.sectionHeader.websiteTitle }}</h1>
+			</div>
+			<div class="subtitle">
+				<h4>{{ .Params.sectionHeader.siteSubtitle }}</h4>
+			</div>
+		</div>
+		<div class="bottom text-center">
+			<a id="scrollDownArrow" href="#food-menu"><i
+				class="fa fa-chevron-down jump"></i></a>
+		</div>
+	</div>
+	<!-- /#header -->
+	<div id="food-menu" class="light-wrapper pricing">
+		<section class="ss-style-top"></section>
+		<div class="container inner">
+			<h2 class="section-title text-center">{{ .Params.sectionFoodMenu.Title }}</h2>
+			<p class="lead main text-center">{{ .Params.sectionFoodMenu.subtitle }}</p>
+			<div class="row" id="upadatedMenu"></div>
+		</div>
+		<section class="ss-style-bottom"></section>
+	</div>
+	<!--/#food-menu-->
+
+	<div id="drinks" class="parallax">
+		<div class="container inner">
+			<h2 class="section-title text-center">{{ .Params.sectionDrinks.Title }}</h2>
+			<p class="lead text-center drinks">{{ .Params.sectionDrinks.subtitle }}</p>
+
+			<div class="row drinks">
+				<table>
+					{{ range.Params.SectionDrinks.DrinkCategories }}
+						<tr>
+							<td>&nbsp;</td>
+							<td><div class="drink-category-title">{{ .title }}</div></td>
+							<td>&nbsp;</td>
+						</tr>
+						{{ range .drinks }}
+						<tr>
+							<td>{{ .volume }}</td>
+							<td><span class="drink-name">{{ .title }}</span>
+								{{ .description}}</td>
+							<td>{{ .price }} {{ $.Site.Data.settings.currency }}</td>
+						</tr>
+						{{ end }}
+					{{ end }}
+				</table>
+			</div>
+		</div>
+	</div>
+	<!-- /#drinks -->
+
+	<div id="about-us" class="light-wrapper">
+		<section class="ss-style-top"></section>
+		<div class="container inner">
+			<h2 class="section-title text-center">{{ .Params.sectionAboutUs.Title }}</h2>
+			<p class="lead main text-center">{{ .Params.sectionAboutUs.subtitle }}</p>
+
+			<div class="row text-center about-us">
+				{{ range .Params.SectionAboutUs.aboutUs}}
+				<div class="col-sm-4">
+					<div class="col-wrapper">
+						<div class="icon-wrapper">
+							<i class="fa {{ .icon }}"></i>
+						</div>
+						<h3>{{ .title }}</h3>
+						{{ .content | markdownify }}
+					</div>
+				</div>
+				{{ end }}
+			</div>
+
+			<p id="news" class="lead main">&nbsp;</p>
+			<h2 class="section-title text-center">{{ .Params.sectionnews.Title }}</h2>
+			<div class="news-items">{{ range .Params.SectionNews.news }}<p>{{ .text | markdownify }}</p>{{ end }}</div>
+			
+		</div>
+		<section class="ss-style-bottom"></section>
+	</div>
+	<!-- #about-us -->
+
+	<div id="contact" class="parallax">
+		<section class="ss-style-top"></section>
+		<div class="container inner">
+			<h2 class="section-title text-center">{{ .Params.SectionContacts.Title }}</h2>
+			<p class="lead contact main text-center contacts">{{ .Params.SectionContacts.subtitle }}</p>
+			<div class="row">
+				<div class="col-md-8">
+					<iframe src="{{ .Params.urlSettings.mapUrl }}" width="600" height="450"
+						frameborder="0" style="border: 0" allowfullscreen></iframe>
+				</div>
+				<div class="col-md-4">
+					{{ range .Params.SectionContacts.contact}}
+					<h3>
+						<i class="fa {{ .icon }} fa-fw"></i>{{ .title }}
+					</h3>
+					<p>{{ .content | markdownify }}</p>
+					{{ end }}
+					<div class="hideIfSingleLocation">
+						<h3>{{ $.Site.Data.settings.ourLocations }}</h3>
+						<p>
+						<ul>
+						{{ range where .Site.Pages "IsPage" true}}
+						<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+						{{ end }}
+						</ul>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- #contact -->
+	<footer id="footer" class="dark-wrapper">
+		<section class="ss-style-top"></section>
+		<div class="container inner">
+			<div class="row">
+				<div class="copy">&copy; {{ now.Year }} {{ .Params.sectionHeader.websiteTitle }}</div>
+				<div class="social-bar">
+					{{ if .Params.urlSettings.facebookUrl }} <a
+						href="{{ .Params.urlSettings.facebookUrl }}"
+						class="fa fa-facebook tooltipped" title="Facebook"
+						target="_blank"></a> {{ end }} {{ if .Params.urlSettings.zomatoUrl }}<a
+						href="{{ .Params.urlSettings.zomatoUrl }}" class="fa fa-spoon tooltipped"
+						title="Zomato" target="_blank"></a>{{ end }} {{ if .Params.urlSettings.googleplusUrl }}<a
+						href="{{ .Params.urlSettings.googleplusUrl }}"
+						class="fa fa-google-plus tooltipped" title="Google+"
+						target="_blank"></a>{{ end }}
+				</div>
+			</div>
+		</div>
+		<!-- /.container -->
+	</footer>
+
+	<div tabindex="-1" class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-img"></div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var jsonMenuUrl = '{{ .Params.urlSettings.foodMenuUrl }}';
+		var jsonOfferUrl = '{{ .Params.urlSettings.offerMenuUrl }}';
+	</script>
+	<script src="{{.Site.BaseURL}}/dist/bundle.js"></script>
+	{{ template "_internal/google_analytics_async.html" . }}
+</body>
+</html>

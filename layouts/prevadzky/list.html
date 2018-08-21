@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="sk-SK">
+<!--<![endif]-->
+<head>
+<title>{{ $.Site.Data.settings.title }} - {{ $.Site.Data.settings.ourLocations }}</title> {{ .Hugo.Generator }}
+
+<!-- meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<!-- css -->
+<link rel="stylesheet" href="/dist/bundle.css">
+
+<link rel="apple-touch-icon" sizes="57x57" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="{{.Site.BaseURL}}/dist/icons/apple-touch-icon-180x180.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="basta"><link rel="icon" type="image/png" sizes="32x32" href="{{.Site.BaseURL}}/dist/icons/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="{{.Site.BaseURL}}/dist/icons/favicon-16x16.png"><link rel="shortcut icon" href="{{.Site.BaseURL}}/dist/icons/favicon.ico"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-320x460.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-640x920.png"><link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-640x1096.png"><link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-750x1294.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1182x2208.png"><link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1242x2148.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-748x1024.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-768x1004.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1496x2048.png"><link rel="apple-touch-startup-image" media="(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" href="{{.Site.BaseURL}}/dist/icons/apple-touch-startup-image-1536x2008.png">
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="120">
+	<div id="menu" class="navbar navbar-inverse navbar-fixed-top"
+		role="navigation">
+		<div class="container">
+			<div class="navbar-header visible-xs">
+				
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<div id="logo">
+					<img src="{{$.Site.Data.settings.logo}}" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="header">
+		<div class="bg-overlay"></div>
+		<div class="center text-center">
+			<div class="banner">
+				<h1 class="">{{$.Site.Data.settings.title }}</h1>
+			</div>
+			<div class="subtitle">
+				{{ range where .Site.Pages "IsPage" true}}
+				<h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+				{{ end }}
+			</div>
+		</div>
+	</div>
+	
+	<footer id="footer" class="dark-wrapper">
+		<section class="ss-style-top"></section>
+	</footer>
+
+	<div tabindex="-1" class="modal fade" id="myModal" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-img"></div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var jsonMenuUrl = '{{ .Params.urlSettings.foodMenuUrl }}';
+		var jsonOfferUrl = '{{ .Params.urlSettings.offerMenuUrl }}';
+	</script>
+	<script src="{{.Site.BaseURL}}/dist/bundle.js"></script>
+	{{ template "_internal/google_analytics_async.html" . }}
+</body>
+</html>

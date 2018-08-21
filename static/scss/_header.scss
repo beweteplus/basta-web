@@ -1,0 +1,199 @@
+// Header and navigation
+#header {
+    background-image: url(../img/bg2.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 100vh;
+    .subtitle h4 {
+        display: inline-block;
+        background: $font-color-light;
+        color: $brand-primary;
+        font-size: 38px;
+        padding: 2px 15px;
+        @media (max-width: $container-tablet) {
+            font-size: 26px;
+        }
+    }
+    .center {
+        position: relative;
+        z-index: 1;
+        color: $font-color-light;
+        padding-top: calc(80vh / 2);
+        .slogan {
+            font-size: 26px;
+            text-transform: uppercase;
+        }
+        .banner h1 {
+            font-size: 100px;
+            color: $font-color-light;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: inline-block;
+            background: $brand-primary;
+            padding: 6px 18px 0px 18px;
+            @media (max-width: $container-tablet) {
+                font-size:52px !important;
+            }
+        }
+    }
+    .bottom {
+        color: $font-color-light;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        bottom: 60px;
+        a {
+            font-size: 36px;
+            color: whitesmoke;
+            position: relative;
+        }
+    }
+}
+
+#menu {
+    background: rgba(33, 45, 57, 0.8);
+    margin-bottom: 0;
+}
+
+a.navbar-brand {
+	padding: 8px 0 14px 15px !important;
+    h2 {
+		font-size: 26px !important;
+        margin-top: 0;
+        font-weight: bold;
+        color: $font-color-light;
+    }
+}
+
+.navbar-nav {
+    >li.logoSpacing {
+        width: 165px;
+    }
+    @media (min-width:768px) {
+        float: none !important;
+        width: 100%;
+        text-align: center;
+        margin-left: 9px;
+        >li {
+            display: inline-block;
+            float: none;
+			width: 82px;
+
+        }
+		>li span{
+			font-weight: 700;
+		}
+    }
+}
+
+.nav > li > a {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.navbar-inverse {
+    .navbar-nav {
+        >li>a {
+            transition: all 0.4s;
+            color: $font-color-light;
+            font-weight: bold;
+        }
+        >.active>a,
+        >.active>a:focus,
+        >.active>a:hover {
+            background: $brand-primary;
+        }
+    }
+}
+
+#logo {
+    position: absolute;
+    display: block;
+    width: 165px;
+    left: 50%;
+    margin-left: -75px;
+    background: $font-color-light;
+    border: gray solid;
+    border-width: 2px;
+    padding: 12px;
+    border-radius: 0 0 100% 100%;
+}
+
+// Title section
+.section-title {
+    font-size: 36px;
+    line-height: 40px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.main.lead {
+    margin-bottom: 80px;
+}
+
+.lead {
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: normal;
+    text-transform: uppercase;
+    position: relative;
+    &:after {
+        position: absolute;
+        content: ' ';
+        background: $brand-primary;
+        width: 80px;
+        height: 3px;
+        bottom: -22px;
+        left: 50%;
+        margin-left: -40px;
+    }
+}
+
+.parallax {
+    background: url(../img/parallax1.jpg) fixed no-repeat center center;
+    background-size: cover;
+    position: relative;
+    color: #FFF;
+    padding-bottom: 32px;
+}
+
+.dropdown {
+	float: right;
+	.dropdown-menu {
+		min-width: 180px;
+		a {
+			display: block;
+			padding-left: 8px;
+		}
+	}
+}
+.navbar-header .dropdown {
+	float: right;
+	.dropdown-menu {
+		margin-left: -80px;
+	}
+}
+
+.dropdown-toggle {
+	color: white;
+}
+.navbar-toggle{
+	height: 34px;
+	padding: 4px 10px;
+}
+
+.narrow-item {
+	cursor: pointer;
+}
+
+.dropdown-menu li:hover .sub-menu {
+  visibility: visible;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
